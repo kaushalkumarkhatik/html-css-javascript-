@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #000117;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa{
+  font-size: 1.7rem;
+}
+
+.box input {
+  padding: 16px 15px;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 250px;
+  font-size: 18px;
+  width: 90vw;
+  opacity: 0.9;
+}
+.box .btn {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 2px 13px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
