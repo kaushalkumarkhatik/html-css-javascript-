@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+:root {
+  --background-color: #046973;
+  --large-circle-color: #010f1c;
+  --light-color: #dcebfe;
+  --gradient-color-light: #5fa0ac;
+  --gradient-color-light-border: #65a3ad;
+  --gradient-color-dark: #004a54;
+  --gradient-color-dark-border: #03505a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+  color: var(--light-color);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+
+
+}
+
+h1 {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 280px;
+  height: 280px;
+  position: relative;
+  transform: scale(1);
+}
+
+.circle {
+  background-color: var(--large-circle-color);
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.round {
+  background: conic-gradient(var(--gradient-color-light) 0%,
+      var(--gradient-color-light-border) 21%,
+      var(--light-color) 21%,
+      var(--light-color) 58%,
+      var(--gradient-color-dark-border) 58%,
+      var(--gradient-color-dark) 100%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10;
+  left: -10;
+  z-index: -2;
+}
+
+.pointer {
+  background-color: var(--light-color);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: block;
+}
+
+.pointer_content {
+  position: absolute;
+  width: 20px;
+  height: 190px;
+  top: -40px;
+  left: 140px;
+  animation: rotate 19s linear forwards infinite;
+  transform-origin: bottom center;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container grow {
+  animation: grow 4s linear forwards;
+
+
+}
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.container.shrink {
+  animation: shrink 8s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
